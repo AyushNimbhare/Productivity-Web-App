@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="time">
+            <span id="hrs"></span> :
+            <span id="mins">00</span> :
+            <span id="secs">00</span>
+        </h1>
+        <div class="name">
+            <h4 class="hour">Hours</h4>
+            <h4 class="minutes">Minutes</h4>
+            <h4 class="seconds">Seconds</h4>
+        </div>
+    </div>
+    <div class="weather">
+        <h4 id="weatherTitle">Weather</h4>
+        <img src="weather_night.png" id="weatherImg">
+        <h1 id="temperature">20°C</h1>
+    </div>
+    <div id="pomodoro">
+        <h1 id="timer">
+            <span id="timerMinutes">25</span> :
+            <span id="timerSeconds">00</span>
+        </h1>
+        <div class="name2">
+            <h4 class="minutes">Minutes</h4>
+            <h4 class="seconds">Seconds</h4>
+        </div>
+        <div id="controls2">
+            <button id="start" onclick="updateTimer('start')" class="controlBtns2">Start</button>
+            <button id="pause" onclick="updateTimer('pause')" class="controlBtns2">Pause</button>
+            <img id="reset" src="restart symbol(black).png" alt="" onclick="updateTimer('reset')">
+            <img id="edit" src="edit.png" alt="" onclick="menu()">
+        </div>
+    </div>
+    <div class="option">
+        <div class="pomodoroWrapper">
+            <button id="theme" class="optionBtns" onclick="changeTheme()">Toggle Theme</button>
+            <button id="change" class="optionBtns" onclick="goAway()">Pomodoro</button>
+        </div>
+        <img src="settings.png" alt="" id="settings">
+    </div>
+    <div class="background">
+
+    </div>
+    <div id="editOptions">
+        <div id="menu">
+            <button id="forTime" class="menuBtn">Pomodoro</button>
+        </div>
+        <div id="menuInterface">
+            <div id="forTimeInterface">
+                <img src="cross.png" alt="" id="cut" onclick="exitMenu()">
+                <div id="timeEdit">
+                    <div id="timeEditContainer">
+                        <div>
+                            <input type="number" id="userDefinedHrs" class="timeEditInput" value="00">
+                            <h6 class="timeEditCaptions">Hrs</h6>
+                        </div>
+                        <div>
+                            <input type="number" id="userDefinedMins" class="timeEditInput" value="25">
+                            <h6 class="timeEditCaptions">Mins</h6>
+                        </div>
+                        <div>
+                            <input type="number" id="userDefinedSecs" class="timeEditInput" value="00">
+                            <h6 class="timeEditCaptions">Secs</h6>
+                        </div>
+                    </div>
+                    <button id="update" onclick="updateValue()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>

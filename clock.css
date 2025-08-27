@@ -1,0 +1,397 @@
+body {
+    /* background: #000000; */
+    /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%); */
+    background-color: white;
+    min-height: 100vh;
+    max-height: 100vh;
+    align-items: center;
+    font-family: "LED Counter 7";
+    transition: all 0.6s ease-in-out;
+    color: black;
+}
+.container {
+    /* border: 2px solid  black; */
+    position: absolute;
+    top: 30vh;
+    left: 30vh;
+    height: 250px;
+    width: 1000px;
+    margin-top: 50px;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.container.show{
+    height : 100px;
+    width : 500px;
+    top : 80vh;
+    left :60vh;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+#time {
+    font-family: "LED Counter 7";
+    font-weight: normal;
+    font-size: 130px;
+    height: 110px;
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid blue; */
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+#time.show {
+    font-size: 50px;
+    height: 50px;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 750px; 
+    margin: auto;
+    font-family: "LED Counter 7";
+    font-size: 20px;
+    /* border: 2px solid red; */
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);;
+}
+.name.show{
+    width: 300px;
+    height:30px;
+    font-size:  15px;
+    margin-right:  auto;
+    margin-left: auto;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+.weather {
+    height: 100px;
+    width: 200px;
+    background-color: #E0E0E0;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 5vh;
+    color: black;
+    right: 5vh;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transition: all 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+#weatherTitle {
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+#weatherImg  {
+    width: 50px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+#temperature {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+h4{
+    margin-top: 0px;
+}
+
+#pomodoro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 40vh;
+    left: 49vh;
+    margin: auto;
+    width: 700px;
+    height: 30vh;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    /* border: 1px solid red; */
+}
+#pomodoro.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease-in-out;
+    pointer-events: auto;
+}
+
+#controls2 {
+    /* border: 1px solid red; */
+    width: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#timer {
+    font-family: "LED Counter 7";
+    font-weight: normal;
+    font-size: 130px;
+    height: 110px;
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid blue; */
+    transition: all 0.6s ease-in-out;
+}
+.name2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 700px; 
+    gap: 140px;
+    font-family: "LED Counter 7";
+    font-size: 20px;
+    /* border: 2px solid red; */
+    transition: all 0.6s ease-in-out;
+}
+.controlBtns {
+    height: 7vh;
+    width: 14vh;
+    border-radius: 25vh;
+    background-color: black;
+    color:white;
+    font-family: 'LED Counter 7';
+    font-size: 2vh;
+
+}
+.controlBtns2 {
+    height: 7vh;
+    width: 14vh;
+    border-radius: 25vh;
+    border: 2px solid black;
+    background-color: white;
+    color:black;
+    font-family: 'LED Counter 7';
+    font-size: 3vh;
+    transition: all 0.6s ease-in-out;
+}
+#reset {
+    width: 7vh;
+    height: 6.4vh;
+    /* border: 1px solid red; */
+}
+#reset:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
+    transition: all 0.3s ease-in-out;
+}
+#reset.rotate360 {
+    transform: rotate(360deg);
+    transition: all 0.6s ease-in; 
+}
+#edit {
+    width: 7vh;
+    height: 6.4vh;
+    /* border: 1px solid red; */
+}
+#edit:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
+    transition: all 0.3s ease-in-out;
+}
+#edit.rotate360 {
+    transform: rotate(360deg);
+    transition: all 0.6s ease-in; 
+}
+.controlBtns:hover {
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+    cursor:pointer;
+}
+.controlBtns2:hover {
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+    cursor:pointer;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 16vh;
+    height: 15vh;
+    /* border: 1px solid green; */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+.controls.show {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+}
+#settings {
+    height: 8vh;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+#settings:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
+}
+.pomodoroWrapper {
+    border: 2px solid black;
+    border-radius: 2vh;
+    width: 30vh;
+    /* height: 20vh; */
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.pomodoroWrapper.show {
+    opacity: 1;
+}
+.option {
+    height: 20vh;
+    width: 35vh;
+    /* border: 1px solid blueviolet; */
+    position: absolute;
+    bottom: 1vh;
+    left: 1vh;
+}
+
+.optionBtns  {
+    height: 5vh;
+    text-align: left;
+    padding-left: 2vh;
+    font-family: "LED Counter 7";
+    font-weight: bold;
+    background: none;
+    border: NONE;
+    transition: all 0.5s ease-in-out;
+}
+.optionBtns:hover {
+    cursor: pointer;
+}
+
+#editOptions {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 50vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px 5px black;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+#editOptions.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    /* border: 5px solid red; */
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+.background.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#menu {
+    width: 30%;
+    background-color: black;
+    color: white;
+    /* border:1px solid red; */
+}
+#menuInterface {
+    width: 70%;
+    background-color: rgb(68, 68, 68);
+    /* border:1px solid red; */
+}
+#forTime{
+    background-color: black;
+    border: none;
+}
+.menuBtn {
+    color: white;
+    font-family: "LED Counter 7";
+    font-size: 2vh;
+    padding-top: 2vh;
+    padding-left: 2vh;
+}
+.menuBtn:hover {
+    cursor: pointer;
+    
+}
+#forTimeInterface {
+    height: 100%;
+    width: 100%;
+    background-color: none;
+}
+#timeEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 40%;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    /* border: 1px solid red; */
+}
+.timeEditInput {
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: right;
+    font-size: medium;
+}
+.timeEditCaptions{
+    text-align: center;
+    width: 40px;
+    margin-top: 2px;
+    margin-left: 7px;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    /* border: 1px solid lime; */
+}
+#update {
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    font-family: "LED Counter 7";
+}
+#update {
+    cursor: pointer;
+}
+#cut {
+    position: absolute;
+    height: 3vh;
+    top: 1vh;
+    right: 1vh;
+    cursor: pointer;
+}
+#timeEditContainer {
+    display: flex;
+    justify-content: space-around;
+    height: 7vh;
+    width: 100%;
+    /* border: 1px solid blue; */
+}

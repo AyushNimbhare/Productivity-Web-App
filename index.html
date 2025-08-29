@@ -26,13 +26,15 @@
     </div>
     <div id="pomodoro">
         <h1 id="timer">
-            <span id="timerMinutes">25</span> :
-            <span id="timerSeconds">00</span>
+            <div>
+                <span id="timerMinutes" class="timerElements">25</span>
+                <h4 class="name2">Minutes</h4>
+            </div> :
+            <div>
+                <span id="timerSeconds" class="timerElements">00</span>
+                <h4 class="name2">Seconds</h4>
+            </div>
         </h1>
-        <div class="name2">
-            <h4 class="minutes">Minutes</h4>
-            <h4 class="seconds">Seconds</h4>
-        </div>
         <div id="controls2">
             <button id="start" onclick="updateTimer('start')" class="controlBtns2">Start</button>
             <button id="pause" onclick="updateTimer('pause')" class="controlBtns2">Pause</button>

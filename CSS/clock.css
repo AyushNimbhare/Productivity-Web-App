@@ -2,8 +2,8 @@ body {
     /* background: #000000; */
     /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%); */
     background-color: white;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 99vh;
+    max-height: 99vh;
     align-items: center;
     font-family: "LED Counter 7";
     transition: all 0.6s ease-in-out;
@@ -12,8 +12,9 @@ body {
 .container {
     /* border: 2px solid  black; */
     position: absolute;
-    top: 30vh;
-    left: 30vh;
+    top : 100%;
+    left :50%;
+    transform: translate(-50%, -50%) scale(0.8);
     height: 250px;
     width: 1000px;
     margin-top: 50px;
@@ -23,8 +24,9 @@ body {
 .container.show{
     height : 100px;
     width : 500px;
-    top : 80vh;
-    left :60vh;
+    top : 89%;
+    left :50%;
+    transform: translate(-50%, -50%) scale(1);
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 #time {
@@ -108,26 +110,25 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 40vh;
-    left: 49vh;
-    margin: auto;
-    width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 500px;
     height: 30vh;
     opacity: 0;
-    transform: scale(0.8);
     pointer-events: none;
     transition: all 0.3s ease-in-out;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 #pomodoro.show {
     opacity: 1;
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transition: all 1s ease-in-out;
     pointer-events: auto;
 }
 
 #controls2 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 45vh;
     display: flex;
     justify-content: space-evenly;
@@ -136,22 +137,29 @@ h4{
 #timer {
     font-family: "LED Counter 7";
     font-weight: normal;
-    font-size: 130px;
-    height: 110px;
+    font-size: 15vh;
+    height: 15vh;
+    width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: space-evenly;
     margin: auto;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     transition: all 0.6s ease-in-out;
+}
+.timerElements {
+    height: 100%;
+    border: 1px solid green;
 }
 .name2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 700px; 
-    gap: 140px;
+    width: 100%; 
+    gap: 10vh;
     font-family: "LED Counter 7";
     font-size: 20px;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     transition: all 0.6s ease-in-out;
 }
 .controlBtns {

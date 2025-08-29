@@ -34,9 +34,9 @@ function changeTheme(){
             btn.style.color = "black";
         }
         theme = "white";
-        resetbtn.src = "restart symbol(black).png";
-        editbtn.src = "edit.png";
-        settings.src = "settings.png";
+        resetbtn.src = "assets/restart symbol(black).png";
+        editbtn.src = "assets/edit.png";
+        settings.src = "assets/settings.png";
         pomodoroWrapper.style.border = "2px solid black";
     }
     else if(theme == "white") {
@@ -56,9 +56,9 @@ function changeTheme(){
             btn.style.color = "white";
         }
         theme = "black";
-        resetbtn.src = "restart symbol.png";
-        editbtn.src = "edit white.png";
-        settings.src = "settings white.png";
+        resetbtn.src = "assets/restart symbol.png";
+        editbtn.src = "assets/edit white.png";
+        settings.src = "assets/settings white.png";
         pomodoroWrapper.style.border = "2px solid white";
     }
 }
@@ -96,23 +96,23 @@ function getWeather(){
         console.log(weather);
         if(hrs<20){
             if (img.includes("overcast")){
-                weatherPNG.src = "weather_tooCloudy.png";
+                weatherPNG.src = "assets/weather_tooCloudy.png";
             }
             else if (img.includes("rain")){
-                weatherPNG.src = "weather_rain.png";
+                weatherPNG.src = "assets/weather_rain.png";
             }
             else if (img.includes("cloud")){
-                weatherPNG.src = "weather_cloudy.png";
+                weatherPNG.src = "assets/weather_cloudy.png";
             }
             else if (img.includes("clear")){
-                weatherPNG.src = "weather_sunny.png";
+                weatherPNG.src = "assets/weather_sunny.png";
             }
             else  {
-                weatherPNG.src = "weather_night.png";
+                weatherPNG.src = "assets/weather_night.png";
             }
         }
         else {
-            weatherPNG.src = "weather_night.png";
+            weatherPNG.src = "assets/weather_night.png";
         }
     })
     .catch(error => console.error("Error fetching weather:", error));
